@@ -1,11 +1,11 @@
 {
     "required": true,
     "minVersion": "0.8.2",
-    "package": "me.unease.peacefulrng.mixin",
+    "package": "us.uneasepurse37.peacefulrng.mixin",
     "refmap": "refmap.json",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        
+        "MixinFood"
     ],
     "client": [
         
