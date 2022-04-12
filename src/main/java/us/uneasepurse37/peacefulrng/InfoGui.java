@@ -26,7 +26,13 @@ public class InfoGui extends Gui {
 		int height = scaled.getScaledHeight();
 		if (!(mc.gameSettings.showDebugInfo)) {
 			if(!PeacefulRNG.isTASMODLoaded) {
-				drawCenteredString(Minecraft.getMinecraft().fontRenderer, "PeacefulRNG is loaded!", width / 2, height -50, 0x336AD1);
+				
+				if(PeacefulRNG.toggledchicken) {
+					drawCenteredString(Minecraft.getMinecraft().fontRenderer, "PeacefulRNG is on!", width / 2, height -50, 0x336AD1);
+				} else {
+					drawCenteredString(Minecraft.getMinecraft().fontRenderer, "PeacefulRNG is off!", width / 2, height -50, 0x55FFFF);
+				}
+				
 			}
 					
 		}
