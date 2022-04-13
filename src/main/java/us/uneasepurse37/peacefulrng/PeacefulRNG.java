@@ -7,6 +7,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
@@ -46,7 +47,7 @@ public class PeacefulRNG {
 	}
 
 	@EventHandler
-	public void init(FMLPreInitializationEvent event) {
+	public void init(FMLInitializationEvent event) {
 
 		logger.info("Mod was initialized!");
 	}
