@@ -45,14 +45,14 @@ public class Commands extends CommandBase {
 				PeacefulRNG.toggledpotato = !PeacefulRNG.toggledpotato;
 			} 
 			
-		} // else if (args.length == 0) {
+		}  else if (args.length == 0) {
 			
-//			boolean flag = PeacefulRNG.toggledchicken || PeacefulRNG.toggledflesh || PeacefulRNG.toggledpotato;
-//			
-//			PeacefulRNG.toggledchicken = !flag;
-//			PeacefulRNG.toggledflesh = !flag;
-//			PeacefulRNG.toggledpotato = !flag;
-//		}
+			boolean flag = PeacefulRNG.toggledchicken || PeacefulRNG.toggledflesh || PeacefulRNG.toggledpotato;
+			
+			PeacefulRNG.toggledchicken = !flag;
+			PeacefulRNG.toggledflesh = !flag;
+			PeacefulRNG.toggledpotato = !flag;
+		}
 		
 		if (PeacefulRNG.isTASMODLoaded) {
 			if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
