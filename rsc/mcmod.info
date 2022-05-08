@@ -3,7 +3,7 @@
   "modid": "peacefulrng",
   "name": "PeacefulRNG",
   "description": "Adds options to toggle certain status effects from consumables.",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "mcversion": "${mcversion}",
   "url": "https://github.com/Unease/PeacefulRNG",
   "updateUrl": "",

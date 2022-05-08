@@ -32,7 +32,7 @@ public class PeacefulRNG {
 	public static boolean toggledchicken = true;
 	public static boolean toggledflesh = true;
 	public static boolean toggledpotato = true;
-	public static boolean isTASMODLoaded = false;
+	public static boolean isTASMODLoaded;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -42,8 +42,11 @@ public class PeacefulRNG {
 		
 		isTASMODLoaded = Loader.isModLoaded("tasmod") | Loader.isModLoaded("lotas");
 		
-		
-		
+		if (isTASMODLoaded = Loader.isModLoaded("tasmod")) {
+			System.out.println("TASMod is loaded with PeacefulRNG!");
+		} else if (isTASMODLoaded = Loader.isModLoaded("lotas")) {
+			System.out.println("LoTAS is loaded with PeacefulRNG!");
+		}
 	}
 
 	@EventHandler
@@ -55,9 +58,9 @@ public class PeacefulRNG {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 
-		logger.warn("This is a warning!");
-		logger.error("Something went wrong, but you might be able to recover from it");
-		logger.fatal("Something broke, and you may not be able to recover, maybe the game crashed");
+//		logger.warn("This is a warning!");
+//		logger.error("Something went wrong, but you might be able to recover from it");
+//		logger.fatal("Something broke, and you may not be able to recover, maybe the game crashed");
 	}
 
 	@EventHandler

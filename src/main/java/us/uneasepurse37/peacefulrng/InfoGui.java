@@ -25,12 +25,28 @@ public class InfoGui extends Gui {
 		int width = scaled.getScaledWidth();
 		int height = scaled.getScaledHeight();
 		if (!(mc.gameSettings.showDebugInfo)) {
-			if(!PeacefulRNG.isTASMODLoaded) {
+			if (!PeacefulRNG.isTASMODLoaded) {
 				
-				if(PeacefulRNG.toggledchicken) {
-					drawCenteredString(Minecraft.getMinecraft().fontRenderer, "PeacefulRNG is on!", width / 2, height -50, 0x336AD1);
-				} else {
-					drawCenteredString(Minecraft.getMinecraft().fontRenderer, "PeacefulRNG is off!", width / 2, height -50, 0x55FFFF);
+				if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) { // Checks if every food is toggled on
+					drawCenteredString(mc.fontRenderer, "PeacefulRNG is on!", width / 2, height -50, 0x336AD1); // Custom blue
+				} else if (!PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {// Checks if every food is toggled off
+					drawCenteredString(mc.fontRenderer, "PeacefulRNG is off!", width / 2, height -50, 0x55FFFF); // Aqua color
+				} 
+				
+				if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) { // Checks if only poisonous potatoes are turned off
+					drawCenteredString(mc.fontRenderer, "Only Poisonous Potatoes are off!", width / 2, height -50, 0x55FF55); // Green
+				} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) { // Checks if only rotten flesh is turned off
+					drawCenteredString(mc.fontRenderer, "Only Rotten Flesh is off!", width / 2, height -50, 0xFFFF55); // Yellow
+				} else if (!PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) { // Checks if only raw chicken is turned off
+					drawCenteredString(mc.fontRenderer, "Only Raw Chicken is off!", width / 2, height -50, 0xFF55FF); // Light Purple
+				}
+				
+				if (!PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) { // Checks if both raw chicken and rotten flesh are turned off
+					drawCenteredString(mc.fontRenderer, "Only Potatoes are on!", width / 2, height -50, 0x00AA00); // Dark Green
+				} else if (!PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) { // Checks if both raw chicken and potatoes are turned off
+					drawCenteredString(mc.fontRenderer, "Only Rotten Flesh is on!", width / 2, height -50, 0xFFAA00); // Gold
+				} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) { // Checks if both rotten flesh and poisonous potatoes are turned off
+					drawCenteredString(mc.fontRenderer, "Only Raw Chicken is on!", width / 2, height -50, 0xAA00AA); // Dark Purple
 				}
 				
 			}
