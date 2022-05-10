@@ -1,4 +1,4 @@
-package us.uneasepurse37.peacefulrng.mixin;
+package com.uneasepurse37.peacefulrng.mixin;
 
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -6,9 +6,10 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+import com.uneasepurse37.peacefulrng.PeacefulRNG;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
-import us.uneasepurse37.peacefulrng.PeacefulRNG;
 
 @Mixin(ItemFood.class) // Tells Mixin which class to target
 public class MixinFood extends Item { //Extends Item to access the food

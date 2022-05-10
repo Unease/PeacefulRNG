@@ -1,4 +1,4 @@
-package us.uneasepurse37.peacefulrng;
+package com.uneasepurse37.peacefulrng;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;

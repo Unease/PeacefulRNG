@@ -1,7 +1,9 @@
-package us.uneasepurse37.peacefulrng.commands;
+package com.uneasepurse37.peacefulrng.commands;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.uneasepurse37.peacefulrng.PeacefulRNG;
 
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
@@ -10,7 +12,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
-import us.uneasepurse37.peacefulrng.PeacefulRNG;
 
 public class Commands extends CommandBase {
 
@@ -43,7 +44,29 @@ public class Commands extends CommandBase {
 				PeacefulRNG.toggledflesh = !PeacefulRNG.toggledflesh;
 			} else if (args[0].equalsIgnoreCase("poisonouspotato")) {
 				PeacefulRNG.toggledpotato = !PeacefulRNG.toggledpotato;
-			} 
+			} else if (args[0].equalsIgnoreCase("status")) {
+					if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
+						sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "PeacefulRNG is toggled" + TextFormatting.RED + " on!"));
+					} else if (!PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
+						sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "PeacefulRNG is toggled" + TextFormatting.AQUA + " off!"));
+					} 
+					
+					if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
+						sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only poisonous potatoes are" + TextFormatting.GREEN+ " off!"));
+					} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
+						sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only rotten flesh is" + TextFormatting.YELLOW+ " off!"));
+					} else if (!PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
+						sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only raw chicken is"+ TextFormatting.LIGHT_PURPLE + " off!"));
+					}
+					
+					if (!PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
+						sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only potatoes are"+ TextFormatting.DARK_GREEN + " on!"));
+					} else if (!PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
+						sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only rotten flesh is"+ TextFormatting.GOLD + " on!"));
+					} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
+						sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only raw chicken is"+ TextFormatting.DARK_PURPLE + " on!"));
+					}
+			}
 			
 		}  else if (args.length == 0) {
 			
@@ -85,7 +108,7 @@ public class Commands extends CommandBase {
 	public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos){
 		List<String> tab = new ArrayList<String>();
 		if (args.length == 1) {
-			tab.addAll(getListOfStringsMatchingLastWord(args, new String[] {"rawchicken", "rottenflesh", "poisonouspotato"}));
+			tab.addAll(getListOfStringsMatchingLastWord(args, new String[] {"rawchicken", "rottenflesh", "poisonouspotato", "status"}));
 		}
 		return tab;
 	} 
