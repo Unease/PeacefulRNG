@@ -1,7 +1,9 @@
-package us.uneasepurse37.peacefulrng;
+package com.uneasepurse37.peacefulrng;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.uneasepurse37.peacefulrng.commands.Commands;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
@@ -11,7 +13,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
-import us.uneasepurse37.peacefulrng.commands.Commands;
 
 /**
  * @author UneasePurse37
