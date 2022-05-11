@@ -66,25 +66,7 @@ public class Commands extends CommandBase {
 				} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
 					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only raw chicken is"+ TextFormatting.DARK_PURPLE + " on!"));
 				}
-			} else if (args[0].equalsIgnoreCase("on")) {
-				
-				boolean flag = !PeacefulRNG.toggledchicken || !PeacefulRNG.toggledflesh || PeacefulRNG.toggledpotato;
-				
-				PeacefulRNG.toggledchicken = !flag;
-				PeacefulRNG.toggledflesh = !flag;
-				PeacefulRNG.toggledpotato = !flag;
-				
-				sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Everything is toggled" + TextFormatting.RED + " on!"));
-			} else if (args[0].equalsIgnoreCase("off")) {
-				
-				boolean flag2 = PeacefulRNG.toggledchicken || PeacefulRNG.toggledflesh || PeacefulRNG.toggledpotato;
-				
-				PeacefulRNG.toggledchicken = !flag2;
-				PeacefulRNG.toggledflesh = !flag2;
-				PeacefulRNG.toggledpotato = !flag2;
-				
-				sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Everything is toggled" + TextFormatting.AQUA + " off!"));
-			}
+			} 
 			
 		}  else if (args.length == 0) {
 			
@@ -126,7 +108,7 @@ public class Commands extends CommandBase {
 	public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos){
 		List<String> tab = new ArrayList<String>();
 		if (args.length == 1) {
-			tab.addAll(getListOfStringsMatchingLastWord(args, new String[] {"rawchicken", "rottenflesh", "poisonouspotato", "status", "off", "on"}));
+			tab.addAll(getListOfStringsMatchingLastWord(args, new String[] {"rawchicken", "rottenflesh", "poisonouspotato", "status"}));
 		}
 		return tab;
 	} 
