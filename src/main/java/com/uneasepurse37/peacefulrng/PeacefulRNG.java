@@ -44,9 +44,9 @@ public class PeacefulRNG {
 		isTASMODLoaded = Loader.isModLoaded("tasmod") | Loader.isModLoaded("lotas");
 		
 		if (isTASMODLoaded = Loader.isModLoaded("tasmod")) {
-			System.out.println("TASMod is loaded with PeacefulRNG!");
+			logger.info("TASMod is loaded with PeacefulRNG!");
 		} else if (isTASMODLoaded = Loader.isModLoaded("lotas")) {
-			System.out.println("LoTAS is loaded with PeacefulRNG!");
+			logger.info("LoTAS is loaded with PeacefulRNG!");
 		}
 	}
 

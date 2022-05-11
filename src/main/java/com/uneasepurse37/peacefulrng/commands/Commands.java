@@ -68,20 +68,20 @@ public class Commands extends CommandBase {
 				}
 			} else if (args[0].equalsIgnoreCase("on")) {
 				
-				boolean flag = !PeacefulRNG.toggledchicken || !PeacefulRNG.toggledflesh || !PeacefulRNG.toggledpotato;
+				boolean flag = !PeacefulRNG.toggledchicken || !PeacefulRNG.toggledflesh || PeacefulRNG.toggledpotato;
 				
 				PeacefulRNG.toggledchicken = !flag;
 				PeacefulRNG.toggledflesh = !flag;
 				PeacefulRNG.toggledpotato = !flag;
 				
-				sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "PeacefulRNG is toggled" + TextFormatting.RED + " on!"));
+				sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Everything is toggled" + TextFormatting.RED + " on!"));
 			} else if (args[0].equalsIgnoreCase("off")) {
 				
-				boolean flag = PeacefulRNG.toggledchicken || PeacefulRNG.toggledflesh || PeacefulRNG.toggledpotato;
+				boolean flag2 = PeacefulRNG.toggledchicken || PeacefulRNG.toggledflesh || PeacefulRNG.toggledpotato;
 				
-				PeacefulRNG.toggledchicken = !flag;
-				PeacefulRNG.toggledflesh = !flag;
-				PeacefulRNG.toggledpotato = !flag;
+				PeacefulRNG.toggledchicken = !flag2;
+				PeacefulRNG.toggledflesh = !flag2;
+				PeacefulRNG.toggledpotato = !flag2;
 				
 				sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Everything is toggled" + TextFormatting.AQUA + " off!"));
 			}
