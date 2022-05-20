@@ -44,28 +44,28 @@ public class Commands extends CommandBase {
 				PeacefulRNG.toggledflesh = !PeacefulRNG.toggledflesh;
 			} else if (args[0].equalsIgnoreCase("poisonouspotato")) {
 				PeacefulRNG.toggledpotato = !PeacefulRNG.toggledpotato;
-			} else if (args[0].equalsIgnoreCase("status")) {
-				if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
-					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Everything is toggled" + TextFormatting.RED + " on!")); //Displays a red message in chat when the mod is toggled on!
-				} else if (!PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
-					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Everything is toggled" + TextFormatting.AQUA + " off!")); //Displays a blue message in chat when the mod is toggled off!
-				} 
-				
-				if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
-					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only poisonous potatoes are" + TextFormatting.GREEN+ " off!"));
-				} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
-					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only rotten flesh is" + TextFormatting.YELLOW+ " off!"));
-				} else if (!PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
-					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only raw chicken is"+ TextFormatting.LIGHT_PURPLE + " off!"));
-				}
-				
-				if (!PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
-					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only potatoes are"+ TextFormatting.DARK_GREEN + " on!"));
-				} else if (!PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
-					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only rotten flesh is"+ TextFormatting.GOLD + " on!"));
-				} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
-					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only raw chicken is"+ TextFormatting.DARK_PURPLE + " on!"));
-				}
+//			} else if (args[0].equalsIgnoreCase("status")) {
+//				if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
+//					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Everything is toggled" + TextFormatting.RED + " on!")); //Displays a red message in chat when the mod is toggled on!
+//				} else if (!PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
+//					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Everything is toggled" + TextFormatting.AQUA + " off!")); //Displays a blue message in chat when the mod is toggled off!
+//				} 
+//				
+//				if (PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
+//					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only poisonous potatoes are" + TextFormatting.GREEN+ " off!"));
+//				} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
+//					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only rotten flesh is" + TextFormatting.YELLOW+ " off!"));
+//				} else if (!PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
+//					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only raw chicken is"+ TextFormatting.LIGHT_PURPLE + " off!"));
+//				}
+//				
+//				if (!PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && PeacefulRNG.toggledpotato) {
+//					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only potatoes are"+ TextFormatting.DARK_GREEN + " on!"));
+//				} else if (!PeacefulRNG.toggledchicken && PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
+//					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only rotten flesh is"+ TextFormatting.GOLD + " on!"));
+//				} else if (PeacefulRNG.toggledchicken && !PeacefulRNG.toggledflesh && !PeacefulRNG.toggledpotato) {
+//					sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "Only raw chicken is"+ TextFormatting.DARK_PURPLE + " on!"));
+//				}
 			} 
 			
 		}  else if (args.length == 0) {
