@@ -8,4 +8,4 @@ By default, the command /peacefulrng has all foods active. If you want to custom
 If you want to check which foods are active, you can also do /peacefulrng status.
 The watermark goes away if you install TASMod / LoTAS since this mod is supposed to be meant for TASing. 
 #
-Made using [ForgeNoGradle]{https://mgnet.work/ForgeNoGradle-1.0.3.jar}
+Made using [ForgeNoGradle](https://mgnet.work/ForgeNoGradle-1.0.3.jar)
