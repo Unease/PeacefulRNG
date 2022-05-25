@@ -9,3 +9,5 @@ If you want to check which foods are active, you can also do /peacefulrng status
 The watermark goes away if you install TASMod / LoTAS since this mod is supposed to be meant for TASing. 
 #
 Made using [ForgeNoGradle](https://mgnet.work/ForgeNoGradle-1.0.3.jar)
+## Development
+All you need to do is drag ForgeNoGradle into the PeacefulRNG directory, then run it. Currently can only run in 1.12.2 at the moment...
