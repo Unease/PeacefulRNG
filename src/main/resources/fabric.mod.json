@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "peacefulrng",
+	"version": "1.0.0",
+	"name": "PeacefulRNG",
+	"description": "A mod for removing hunger effects from certain foods.",
+	"authors": [
+		"Unease"
+	],
+	"contact": {
+		"homepage": "https://minecrafttas.com",
+		"sources": "https://github.com/MinecraftTAS"
+	},
+
+	"license": "GPLv3",
+	"icon": "",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.minecrafttas.peacefulrng.PeacefulRNG"
+		]
+	},
+	"mixins": [
+		"peacefulrng.mixin.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.11",
+		"minecraft": "1.11.2",
+		"java": ">=8"
+	}
+}

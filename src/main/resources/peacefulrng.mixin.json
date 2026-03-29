@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "com.minecrafttas.peacefulrng.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+	],
+	"client": [
+		"MixinGuiMainMenu",
+		"MixinItemFood"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
