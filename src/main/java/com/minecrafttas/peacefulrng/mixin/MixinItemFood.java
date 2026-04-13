@@ -27,7 +27,7 @@ public class MixinItemFood {
 		String rottenFlesh = "item.rottenFlesh";
 		String rawChicken = "item.chickenRaw";
 		String potatoPoisonous = "item.potatoPoisonous";
-		if (PeacefulRNG.isTASMODLoaded) {
+		if (PeacefulRNG.isTASmodLoaded) {
 			if (name.equalsIgnoreCase(rottenFlesh) || name.equalsIgnoreCase(potatoPoisonous) || name.equalsIgnoreCase(rawChicken)) {
 				return 0F; // They will never give the effect because its RNG
 			}

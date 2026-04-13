@@ -22,13 +22,11 @@ public class MixinGuiMainMenu {
 	private String splashText;
 	@Inject(at = @At("TAIL"), method = "initGui")
 	private void initInject(CallbackInfo ci) {
-		//# 1.11.2
-		this.minceraftRoll = 0F;
-		//# end
-		this.splashText = "Without Forge world generation!";
-		
-		if (PeacefulRNG.isTASMODLoaded) {
-			this.splashText = "Loaded with TASMod!";
+		if (PeacefulRNG.isTASmodLoaded) {
+			//# 1.11.2
+			this.minceraftRoll = 0F;
+			//# end
+			this.splashText = "Tool-Assisted Speedruns are cool!";
 		}
 	}
 }

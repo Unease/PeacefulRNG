@@ -9,13 +9,13 @@ import net.fabricmc.loader.api.FabricLoader;
 public class PeacefulRNG implements ModInitializer{
 
 	public static Logger LOGGER = LogManager.getLogger("PeacefulRNG");
-	public static boolean isTASMODLoaded = FabricLoader.getInstance().isModLoaded("tasmod");
+	public static boolean isTASmodLoaded = FabricLoader.getInstance().isModLoaded("tasmod");
 	
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing...");
 		
-		if (isTASMODLoaded) {
+		if (isTASmodLoaded) {
 			LOGGER.info("TASmod is detected!");
 		} else {
 			LOGGER.info("TASmod not detected!");
